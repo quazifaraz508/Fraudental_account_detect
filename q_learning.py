@@ -91,7 +91,7 @@ if st.button("🔍 Predict Account Type"):
         st.error(f"⚠️ {selected_model_name} predicts this account as **FAKE**.")
 
 # ================== PIE CHARTS FOR MODELS ================== #
-st.subheader("📊 Fake vs. Genuine Accounts - Model Predictions")
+st.subheader("📊 Fake vs. Genuine Account - Model Predictions")
 
 show_pie_chart = st.checkbox("Show Pie Charts for All Models")
 
@@ -103,7 +103,7 @@ if show_pie_chart:
         fake_count = np.sum(y_pred_test == 1)
         genuine_count = np.sum(y_pred_test == 0)
 
-        labels = ["Fake Accounts", "Genuine Accounts"]
+        labels = ["Fake Account", "Genuine Account"]
         sizes = [fake_count, genuine_count]
         colors = ['red', 'green']
 
@@ -165,7 +165,7 @@ q_fake_count = np.sum(q_predictions == 1)
 q_genuine_count = np.sum(q_predictions == 0)
 
 fig2, ax2 = plt.subplots()
-ax2.pie([q_fake_count, q_genuine_count], labels=["Fake Accounts", "Genuine Accounts"], autopct='%1.1f%%',
+ax2.pie([q_fake_count, q_genuine_count], labels=["Fake Account", "Genuine Account"], autopct='%1.1f%%',
         colors=['red', 'green'], startangle=90)
 ax2.axis('equal')
 
