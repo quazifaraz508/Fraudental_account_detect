@@ -171,6 +171,9 @@ ax2.axis('equal')
 
 st.pyplot(fig2)
 
+st.link_button("Go to Sentiment Analysis", "https://sentiment-analysis-hack.streamlit.app/")
+
+
 # ================== FOOTER ================== #
 st.markdown(
     """
